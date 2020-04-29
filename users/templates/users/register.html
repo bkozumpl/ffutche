@@ -1,0 +1,39 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>register</title>
+</head>
+
+<body>
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Create a User</legend>
+			{{ form|crispy }}
+		</fieldset>
+		<div class="form-group">
+			<button class="btn btn-outline-info" type="submit">Sign Up</button>
+			
+			
+		</div>
+	
+		
+		</form>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already a User? <a class="ml-2" href="#">Sign In</a>
+			</small>
+		
+		</div>
+	
+	
+	
+	</div>
+{% endblock content %}
+	
+</body>
+</html>
